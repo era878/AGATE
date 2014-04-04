@@ -1,44 +1,36 @@
-/*
- * Globals
- */
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin-top: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
+    padding-bottom: 40px;
+    color: #5a5a5a;
 }
 
 
-/*
- * Override Bootstrap's default container.
- */
 
-@media (min-width: 1200px) {
-  .container {
-    width: 970px;
-  }
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
 }
 
-
-/*
- * Masthead for nav
- */
-
-.blog-masthead {
-  background-color: #428bca;
-  box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+    padding-right: 0;
+    padding-left: 0;
 }
+.navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 
 /* Nav links */
 .blog-nav-item {
@@ -147,17 +139,4 @@ h6, .h6 {
 .blog-post-meta {
   margin-bottom: 20px;
   color: #999;
-}
-
-
-/*
- * Footer
- */
-
-.blog-footer {
-  padding: 40px 0;
-  color: #999;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
 }
